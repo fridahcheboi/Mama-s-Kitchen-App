@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Fridah Cheruto Cheboi">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="adminStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class = "logo"></div>
+            <ul class="menu">
+                <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li><a href="#"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                <li><a href="users.html"><i class="fa-solid fa-list"></i><span>User Management</span></a></li>
+                <li><a href="recipes.html"><i class="fas fa-utensils"></i><span>Recipe Management</span></a></li>
+                <li class="logout"><a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header-wrapper">
+                <div class="header-title"><span>Primary</span><h2>Dashboard</h2></div>
+                <div class="user-info">
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <img src="images/avatar.png" alt="">
+                </div>
+            </div>
+
+            <div class="summary-container">                             
+                <div class="cards">
+                    <i class="fas fa-users icon"></i>
+                    <h3>Total Users</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="cards">
+                    <i class="fas fa-utensils icon"></i>
+                    <h3>Total Recipes</h3>
+                    <p>1,234</p>
+                </div>             
+            </div>
+            <div class="chart-box">
+                <h2>Recipes created per month</h2>
+                <canvas id="recipeChart"></canvas>
+            </div>
+            
+            
+            <div class="table-wrapper">
+                <h2>Most active users</h2>
+                <table class="my-table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Recipes Created</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fridah Cheboi</td>
+                            <td>420</td>
+                        </tr>
+                        <tr>
+                            <td>Anne Mwakiridia</td>
+                            <td>230</td>
+                        </tr>
+                        <tr>
+                            <td>Noah Kibet</td>
+                            <td>221</td>
+                        </tr>
+                        <tr>
+                            <td>Anitah Mrunde</td>
+                            <td>199</td>
+                        </tr>
+                        <tr>
+                            <td>Elizabeth Jepchumba</td>
+                            <td>43</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            const ctx = document.getElementById('recipeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Total number of recipes',
+                        data: [30, 88, 10, 199, 12, 230],
+                        backgroundColor: 'rgb(240,10,250)',
+                        borderColor: 'rgb(240,248,255)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<section id="header">
+            <div class="container">
+                <img src="Mlogo.png" class="logo">
+                <div class = "header-text">
+                    <h1>Hi there, Welcome to Mama's Kitchen</h1>
+                    <span class="square"></span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ut mollitia! Harum ullam quaerat amet saepe quasi! Quis sint delectus fugiat officia, voluptate at, facilis facere ullam magnam dignissimos error?</p>
+                    <button class="read-more">Read More</button>
+                    <div class="line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+#header{
+    height: 100vh;
+    background-image: url(HomeBackground.jpg);
+    background-position: center;
+    background-size:cover;
+}
+
+.container{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.logo{
+    margin-top: 30px;
+    width: 100px;
+}
+.header-text{
+    max-width: 350px;
+    margin-top: 140px;
+}
+.h1{
+    font-size: 34;
+}
+.square{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background-color: brown;
+    margin: 15px 0;
+}
+.read-more{
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #f6f6f6;
+    cursor: pointer;
+}
+p{
+    font-size: 15px;
+    line-height: 18px;
+    color: #777;
+}
+
+.header-text button{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Fridah Cheruto Cheboi">
+        <link rel="stylesheet" href="adminStyle.css">
+        <title>Recipe Management - Mama's Kitchen</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class = "logo"></div>
+            <ul class="menu">
+                <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li><a href="#"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                <li><a href="users.html"><i class="fa-solid fa-list"></i><span>User Management</span></a></li>
+                <li><a href="recipes.html"><i class="fas fa-utensils"></i><span>Recipe Management</span></a></li>
+                <li class="logout"><a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header-wrapper">
+                <div class="header-title"><h2>Recipe Management</h2></div>
+                <div class="user-info">
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <img src="images/avatar.png" alt="">
+                </div>
+            </div>
+        
+
+        <table class="my-table" id="recipeList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Date created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>Didi Spicy Beef</td>
+                    <td>Anita Mrunde</td>
+                    <td>2024-07-10</td>
+                    <td>
+                        <button class="button button-edit">Edit</button>
+                        <button class="button button-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hibachi Honey Fingers</td>
+                    <td>Anita Mrunde</td>
+                    <td>2024-07-11</td>
+                    <td>
+                        <button class="button button-edit">Edit</button>
+                        <button class="button button-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Garlic Paprika Salmon</td>
+                    <td>Anne Mwakiridia</td>
+                    <td>2024-07-10</td>
+                    <td>
+                        <button class="button button-edit">Edit</button>
+                        <button class="button button-delete">Delete</button>
+                    </td>
+                </tr>
+                <tbody id="recipeList"></tbody>
+        </table>
+
+        <div class="container">
+            <form action="">
+                <h2>Add new recipe</h2>
+                <label for="recipe-title">Title: </label>
+                <input type="text" id="recipe-title" name="recipe-title" placeholder="Enter recipe name here">
+                <br><br>
+                <label for="author">Author: </label>
+                <input type="text" id="author" placeholder="Enter author's name here">
+                <br><br>
+                <label for="date">Date created: </label>
+                <input type="date" id="date-created" placeholder="Enter date here">
+                <br><br>
+                <div class="form-action-buttons">
+                    <input type="submit" value="submit" class="button">
+                </div>
+        </form>
+        </div>
+       <script src="script.js"></script>
+    </body>
+</html>

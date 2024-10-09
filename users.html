@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Recipe App</title>
+    <link rel="stylesheet" href="adminStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class = "logo"></div>
+        <ul class="menu">
+            <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i><span>Profile</span></a></li>
+            <li><a href="users.html"><i class="fa-solid fa-list"></i><span>User Management</span></a></li>
+            <li><a href="recipes.html"><i class="fas fa-utensils"></i><span>Recipe Management</span></a></li>
+            <li class="logout"><a href="index.html"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header-wrapper">
+            <div class="header-title"><h2>User Management</h2></div>
+            <div class="user-info">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <img src="images/avatar.png" alt="">
+            </div>
+        </div>
+
+    <main>
+        <section id="user-management">
+            <button class="button">Add New User</button>
+            
+            
+            <table class="my-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fridah Cheboi</td>
+                        <td>fridah.cheboi@gmail.com</td>
+                        <td>Admin</td>
+                        <td>
+                            <button class="button button-edit">Edit</button>
+                            <button class="button button-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Elizabeth Jepchumba</td>
+                        <td>elizabeth.jepchumba@gmail.com</td>
+                        <td>User</td>
+                        <td>
+                            <button class="button button-edit">Edit</button>
+                            <button class="button button-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Anita Mrunde</td>
+                        <td>anita.mrunde@gmail.com</td>
+                        <td>User</td>
+                        <td>
+                            <button class="button button-edit">Edit</button>
+                            <button class="button button-delete">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Anne Mwakiridia</td>
+                        <td>anne.mwakiridia@gmail.com</td>
+                        <td>User</td>
+                        <td>
+                            <button class="button button-edit">Edit</button>
+                            <button class="button button-delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

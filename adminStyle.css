@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: garamond, serif;
+}
+
+body{
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: orange;
+}
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5px;
+}
+.logo{
+    width: 10px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover,
+.active{
+    background-color: rgb(255, 204, 108);
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 600;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.main-content{
+    position: relative;
+    background: white;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header-wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1 rem;
+}
+.header-title{
+    color: black;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1 rem;
+}
+.search-box{
+    background: #e4e3e3;
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search-box input{
+    background: transparent;
+    padding: 10px;
+}
+.search-box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.search-box i:hover{
+    transform: scale(1.2);
+}
+
+.summary-container{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cards{
+    background-color: rgb(127, 206, 206);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.cards:hover{
+    transform: translate(-5px);
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.total-number{
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+.icon{
+    padding: 1 rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 1.5rem;
+}
+.table-wrapper{
+    margin: 10px, 70px, 70px;
+    box-shadow: 0px 35px 50px rgb(247, 235, 214);
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 700px;
+}
+.table-wrapper h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.my-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: rgb(252, 249, 249);
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: rgb(250, 175, 36);
+}
+.my-table tr:nth-child(even) {
+    background: aliceblue;
+}
+.chart-box{
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0px 35px 50px rgb(247, 235, 214);
+}
+.chart-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+canvas{
+    max-width: 200%;
+    height: 300px;
+}
+
+.button{
+    border-radius: 10px;
+    background-color: orange;
+    padding: 8px;
+    margin: 5px;
+    font-size: 15px;
+}
+.container{
+    background-color: aliceblue;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"]{
+    
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    
+}
