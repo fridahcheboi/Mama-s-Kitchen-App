@@ -41,13 +41,13 @@ img{
     float: right;
     padding: 20px;
     box-sizing: border-box;
-    text-align: center;
-
+    margin: 40px;
 }
+
 
 .left p{
     margin-top: 10px;
-    margin-bottom:10px
+    margin-bottom:0px;
 }
 input[type="text"],
 input[type="email"],
@@ -56,13 +56,23 @@ input[type="submit"]{
     
     width: 350px;
     padding: 10px;
-    margin-bottom: 10px;
+    
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 15px;
     
 }
+.errorMessage{
+    color: red;
+    width: 350px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+
+
 input[type="submit"] {
     background-color: #e0dcdc; 
     cursor: pointer; 

@@ -18,11 +18,14 @@
                     <h2>Welcome back!</h2>
 
                     
-                    <form>                       
+                    <form id="loginform">                       
                         <p>Please enter your details</p>
-
-                        <input type="text" id="username" placeholder="Username" required><br><br>
-                        <input type="text" id="password" placeholder="Password" required><br><br>
+                        <div class="inputStuff">
+                            <input type="text" id="email" placeholder="Email" required><br><br>
+                            <small id="emailError" class="errorMessage"></small>
+                            <input type="text" id="password" placeholder="Password" required><br><br>
+                            <small id="passwordError" class="errorMessage"></small>
+                        </div>
                         
                         <div class="options">
                             <input type="checkbox" id="remember-me">
@@ -31,11 +34,12 @@
                         </div>
                         <br>
                         
-                        <input type="submit" value="Sign In">
+                        <input type="submit" id="submit" value="Sign In">
 
                         
                         <p>Don't have an account? <a href="signup.html">Signup here</a></p>
                     </form>
+                    <script src="script.js"></script>
             </div>
         </div>
     </body>

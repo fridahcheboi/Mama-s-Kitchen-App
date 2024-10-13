@@ -14,26 +14,98 @@
                 <img src="images/PictureFood2.jpg" alt="Picture of food">
             </div>
             <div class="left">
-                <a href="index.html"><img src="images/Mlogo.png", alt="Mama's kitchen logo" width="150px" class="logo"></a>
+                <a href="index.html"><img src="images/Mlogo.png" alt="Mama's kitchen logo" width="150px" class="logo"></a>
                 
                     <h2>Welcome back!</h2>
 
                     
-                    <form>        
+                    <form id="signupform">        
                         <p>Please enter your details</p>
 
-                        <input type="text" id="firstname" placeholder="First name" required><br><br>
-                        <input type="text" id="lastname" placeholder="Last name" required><br><br>
-                        <input type="email" id="email" placeholder="Email" required><br><br>
+                        <input type="text" id="firstname" placeholder="First name" ><br><br>
+                        <small id="firstnameError" class="errorMessage"></small>
+                        <input type="text" id="lastname" placeholder="Last name"><br><br>
+                        <small id="lastnameError" class="errorMessage"></small>
+                        <input type="text" id="email" placeholder="Email" required><br><br>
+                        <small id="emailError" class="errorMessage"></small>
                         <input type="password" id="password" placeholder="Password" required><br><br>
+                        <small id="passwordError" class="errorMessage"></small>
                         <input type="password" id="confirm-password" placeholder="Confirm Password" required><br><br>
-
+                        <small id="confirmPasswordError" class="errorMessage"></small>
                                                 
-                        <input type="submit" value="Sign Up">
+                        <input type="submit" id="submit" value="Sign Up">
 
                         
                         <p>Already have an account? <a href="login.html">Signin here</a></p>
                     </form>
+                    <script>
+                        document.getElementById("signupform").addEventListener('submit',function(event){
+                        const email = document.getElementById("email").value;
+                        const password = document.getElementById("password").value;
+                        const confirmPassword = document.getElementById("confirm-password").value;
+                        const firstname = document.getElementById("firstname").value;
+                        const lastname = document.getElementById("lastname").value;
+
+                        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+                        const emailError = document.getElementById('emailError');
+
+                        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+                        const passwordError = document.getElementById('passwordError');
+
+                        const firstnameError = document.getElementById('firstnameError');
+                        const lastnameError = document.getElementById('lastnameError');
+                        const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+                        let valid = true;
+
+                                    if (firstname === ""){
+                                        firstnameError.textContent = "Please enter your first name";
+                                        valid=false;
+                                        firstnameError.style.display = 'flex';
+                                    }
+                                    else{
+                                        firstnameError.style.display = 'none';
+                                    }
+
+                                    if (lastname === ""){
+                                        lastnameError.textContent = "Please enter your last name";
+                                        valid=false;
+                                        lastnameError.style.display = 'flex';
+                                    }
+                                    else{
+                                        lastnameError.style.display = 'none';
+                                    }
+
+                                    if (!emailPattern.test(email)){
+                                        emailError.textContent = "Please enter a valid email address";
+                                        valid = false;
+                                        emailError.style.display = 'flex';
+                                    }
+                                    else {
+                                        emailError.style.display = 'none';
+                                    }
+
+                                    if (!passwordPattern.test(password)){
+                                        passwordError.textContent = "Password must contain atleast an uppercase letter, three digits, a special character(@, #, $ etc) and be atleast 8 characters long";
+                                        passwordError.style.display = 'flex';
+                                        valid = false;
+                                    }else {
+                                        passwordError.style.display = 'none';
+                                    }
+                                    if (confirmPassword !== password){
+                                        confirmPasswordError.textContent = "Passwords do not match";
+                                        confirmPasswordError.style.display = 'flex';
+                                        valid=false;
+                                    }else {
+                                        confirmPasswordError.style.display = 'none';
+                                    }
+
+                                    if(!valid){
+                                        event.preventDefault()
+                                    }
+
+                    }); 
+                    </script>
             </div>
         </div>
     </body>
